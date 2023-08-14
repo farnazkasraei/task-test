@@ -25,7 +25,7 @@ const SkillChart = () => {
   }, []);
   return (
     <div className="flex justify-center mt-10 w-full">
-      {newUser ? (
+      {newUser.length !== 0 ? (
         <PieChart width={300} height={300}>
           <Pie
             data={newUser}
@@ -38,7 +38,9 @@ const SkillChart = () => {
           />
           <Tooltip />
         </PieChart>
-      ) : null}
+      ) : (
+        <h3> داده موجود نیست</h3>
+      )}
     </div>
   );
 };

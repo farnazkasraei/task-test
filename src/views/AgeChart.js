@@ -44,7 +44,7 @@ const AgeChart = () => {
 
   return (
     <div className="flex justify-center mt-10 w-full">
-      {newUser ? (
+      {newUser.length !== 0 ? (
         <BarChart
           width={900}
           height={300}
@@ -63,7 +63,9 @@ const AgeChart = () => {
           <Legend />
           <Bar dataKey="occurrence" fill="#8884d8" />
         </BarChart>
-      ) : null}
+      ) : (
+        <h3> داده موجود نیست</h3>
+      )}
     </div>
   );
 };
