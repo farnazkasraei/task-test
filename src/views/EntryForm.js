@@ -60,7 +60,7 @@ const EntryForm = () => {
               },
 
               {
-                pattern: new RegExp(/^[A-Za-z]+$/),
+                pattern: new RegExp(/^[\p{L}\s]*$/u),
                 message: "نام معتبر وارد کنید ",
               },
             ]}
@@ -76,7 +76,7 @@ const EntryForm = () => {
                 message: "نام خانوادگی خود را وارد کنید ",
               },
               {
-                pattern: new RegExp(/^[A-Za-z]+$/),
+                pattern: new RegExp(/^[\p{L}\s]*$/u),
                 message: "نام خانوادگی معتبر وارد کنید ",
               },
             ]}
